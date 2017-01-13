@@ -32,7 +32,6 @@
     "gzip-size": "3.0.0",
     "html-webpack-plugin": "2.24.0",
     "http-proxy-middleware": "0.17.2",
-    "jest": "17.0.2",
     "json-loader": "0.5.4",
     "mocha": "^3.2.0",
     "object-assign": "4.1.0",
@@ -60,30 +59,6 @@
     "build": "node scripts/build.js",
     "test": "mocha --require ./testSetup.js --compilers babel-core/register ./spec/*spec.js",
     "test:watch": "npm test -- -w"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
-    ],
-    "setupFiles": [
-      "<rootDir>/config/polyfills.js"
-    ],
-    "testPathIgnorePatterns": [
-      "<rootDir>[/\\\\](build|docs|node_modules)[/\\\\]"
-    ],
-    "testEnvironment": "node",
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
-    ],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web"
-    }
   },
   "babel": {
     "presets": [
